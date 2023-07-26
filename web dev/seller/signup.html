@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <section class="container forms">
+        <div class="form login">
+<div class="form-content">
+    <header>SignUp</header>
+<form action="signup.php" method="POST" onsubmit="return validate()">
+    <div class="field input-field">
+        <input type="email" placeholder="Email" name="email" id="email" required>
+        </div>
+        <div class="field input-field">
+
+<input type="password" placeholder="password" name="pass" id="password"required>
+</div>
+<div class="field input-field">
+<input type="password" placeholder="Retype password" name="pass1" id="password1"required>
+    </div>
+    <div class="field-button">
+   <input class="field-button" type="submit" value="SignIn">
+   </div>
+   <span>Already Have Account ?<a href="login.php" class="login-red">Login</a></span>
+</form>
+</div>
+</div>
+ </section>
+</body>
+<script>
+function validate()
+{ var mail=document.getElementById("email").value;
+    var pass1=document.getElementById("password").value;
+ var pass=document.getElementById("password1").value;
+if(pass1==pass)
+{
+    return true;
+}
+    else
+    {
+      alert("passsword and retype password must be same");
+return false;
+    }
+    
+}
+
+</script>
+</html>
